@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAKU-Board 先生ログインデモ</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RTOK1B7/LMDJgKzC3K5tW8n4J6rI8l22E1R3wX0eJ2lR9Jj3wFf8A8eW3o5G+E3wK5tQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .login-form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-form-container h2 {
+            color: #4a90e2;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 25px;
+        }
+
+        /* フォーム要素 */
+        .login-form-container input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* 倫理的配慮の説明 */
+        .security-note {
+            background-color: #fce4e4;
+            border: 1px solid #e74c3c;
+            color: #c0392b;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        /* ボタン共通スタイル */
+        .btn {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 5px;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        
+        .btn-primary {
+            background-color: #4a90e2;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: #ecf0f1;
+            color: #34495e;
+            border: 1px solid #ddd;
+        }
+
+        .separator {
+            margin: 20px 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="teacher-login" class="login-page">
+        <div class="login-form-container">
+            <header>
+                <h2>👩‍🏫 先生ログイン</h2>
+                <p class="subtitle">GAKU-Board 先生専用ダッシュボードへアクセス</p>
+            </header>
+
+            <div class="security-note">
+                <i class="fas fa-lock"></i>
+                <p>※本番では厳格な認証が必要です。デモではスキップ可能です。</p>
+            </div>
+
+            <form onsubmit="return false;">
+                <input type="email" placeholder="メールアドレス (ID)" required>
+                <input type="password" placeholder="パスワード" required>
+                <button class="btn btn-primary btn-full-width" onclick="alert('実際のログイン処理をシミュレーションし、ダッシュボードへ遷移します。')">
+                    <i class="fas fa-sign-in-alt"></i> ログイン (デモへ進む)
+                </button>
+            </form>
+
+            <div class="separator">--- または ---</div>
+            <button class="btn btn-secondary btn-full-width" onclick="alert('先生ダッシュボードデモ画面へ遷移します。')">
+                🔑 認証をスキップし、先生ダッシュボードデモへ
+            </button>
+            
+            <a href="#" class="back-link" onclick="alert('ホーム画面へ戻ります。')">
+                <i class="fas fa-angle-left"></i> ホーム画面に戻る
+            </a>
+        </div>
+    </section>
+    
+    </body>
+</html>
